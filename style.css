@@ -1,0 +1,392 @@
+/* ========================
+   Reset básico e tipografia
+========================= */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212;
+  color: #eee;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* ========================
+   Layout geral
+========================= */
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem 0;
+}
+
+/* ========================
+   Header
+========================= */
+.header {
+  position: relative;
+  height: 180px;
+  background: url('../img/header-bg.jpg') center center/cover no-repeat;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  z-index: 10;
+}
+
+.header__overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5;
+}
+
+.header__container {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #e94e1b;
+  text-shadow: 1px 1px 4px #000;
+}
+
+.header__title span {
+  color: #f9a825;
+}
+
+/* ========================
+   Navegação
+========================= */
+.nav__list {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav__link {
+  color: #f9a825;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  padding: 0.2rem 0;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav__link:hover,
+.nav__link:focus {
+  color: #e94e1b;
+}
+
+.nav__link::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #e94e1b;
+  transition: width 0.3s ease;
+}
+
+.nav__link:hover::after,
+.nav__link:focus::after {
+  width: 100%;
+}
+
+/* ========================
+   Hero
+========================= */
+.hero {
+  background: url('https://images.unsplash.com/photo-1604908177524-d61585738bdb?auto=format&fit=crop&w=1400&q=80') center center/cover no-repeat;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.6);
+  color: #f9a825;
+}
+
+
+ /* ...reset CSS e estilos globais... */
+
+.hero {
+  background: url('img/brasa.jpg') no-repeat center center;
+  background-size: cover;
+  position: relative;
+  padding: 120px 20px;
+  text-align: center;
+  color: white;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* escurece a imagem para o texto ficar legível */
+  z-index: 1;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero__title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 8px #000;
+}
+
+.hero__subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 6px #000;
+}
+
+
+
+
+/* ========================
+   Botões
+========================= */
+.btn {
+  cursor: pointer;
+  border-radius: 30px;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 0.75rem 2.25rem;
+  display: inline-block;
+  border: none;
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+.btn--primary {
+  background-color: #e94e1b;
+  color: #fff;
+  box-shadow: 0 4px 10px #0008;
+}
+
+.btn--primary:hover,
+.btn--primary:focus {
+  background-color: #f9a825;
+  color: #000;
+  transform: scale(1.1);
+  outline: none;
+}
+
+/* ========================
+   Seções
+========================= */
+.section {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.section__title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #f9a825;
+  border-bottom: 3px solid #e94e1b;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.section__text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: #ddd;
+}
+
+.section__image {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #000a;
+  object-fit: cover;
+}
+
+/* ========================
+   Cardápio
+========================= */
+.menu__list {
+  list-style: none;
+  color: #f9a825;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.menu__item {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.menu__item i {
+  color: #e94e1b;
+  font-size: 1.4rem;
+}
+
+/* ========================
+   Galeria
+========================= */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.gallery__image {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px #0008;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.gallery__image:hover,
+.gallery__image:focus {
+  transform: scale(1.05);
+  outline: none;
+}
+
+/* ========================
+   Formulário de reserva
+========================= */
+.form-reserva {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.form-reserva input[type="text"],
+.form-reserva input[type="tel"],
+.form-reserva input[type="date"] {
+  padding: 12px 15px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  width: 260px;
+  max-width: 100%;
+}
+
+.form-reserva button {
+  padding: 12px 30px;
+  width: 150px;
+}
+
+/* ========================
+   Rodapé
+========================= */
+.footer {
+  background-color: #1c1c1c;
+  padding: 1rem 0;
+  text-align: center;
+  color: #f9a825;
+  font-weight: 700;
+  box-shadow: 0 -4px 8px #0008;
+}
+
+/* ========================
+   Responsividade
+========================= */
+@media (max-width: 720px) {
+  .header__title {
+    font-size: 1.8rem;
+  }
+
+  .nav__list {
+    gap: 1rem;
+  }
+
+  .nav__link {
+    font-size: 1rem;
+  }
+
+  .hero {
+    height: 280px;
+  }
+
+  .hero__title {
+    font-size: 2rem;
+  }
+
+  .hero__subtitle {
+    font-size: 1rem;
+  }
+
+  .btn--primary {
+    padding: 0.6rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .section__title {
+    font-size: 1.8rem;
+  }
+
+  .form-reserva input[type="text"],
+  .form-reserva input[type="tel"],
+  .form-reserva input[type="date"] {
+    width: 100%;
+  }
+
+  .form-reserva button {
+    width: 100%;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+.logo {
+  font-size: 2.2rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+  flex-wrap: wrap;
+}
+
+.churrascaria {
+  color: #f4c531; /* Dourado */
+}
+
+.fogo {
+  color: #d62828; /* Vermelho forte */
+}
+
+.brasa {
+  color: #f77f00; /* Laranja queimado */
+}
+
+.logo i {
+  color: #f4c531; /* Ou a mesma cor da palavra "Churrascaria" */
+  font-size: 1.2em;
+}
+}

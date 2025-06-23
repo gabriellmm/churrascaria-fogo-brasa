@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Churrascaria Fogo & Brasa</title>
+
+  <!-- Font Awesome para ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" />
+
+  <!-- CSS principal -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- HEADER COM NAVEGAÇÃO -->
+  <header class="header">
+    <div class="header__overlay"></div>
+    <div class="header__container container">
+<h1 class="logo">
+  <span class="churrascaria">Churrascaria</span>
+  <span class="fogo">Fogo</span>
+  &amp;
+  <span class="brasa">Brasa</span>
+  <i class="fas fa-utensils"></i>
+</h1>
+
+      <nav class="nav" aria-label="Menu principal">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#sobre" class="nav__link">Sobre</a></li>
+          <li class="nav__item"><a href="#menu" class="nav__link">Cardápio</a></li>
+          <li class="nav__item"><a href="#galeria" class="nav__link">Galeria</a></li>
+          <li class="nav__item"><a href="#reservar" class="nav__link">Reservar</a></li>
+          <li class="nav__item"><a href="#contato" class="nav__link">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- SEÇÃO HERO COM CHAMADA -->
+  <section class="hero">
+    <div class="hero__content container">
+      <h2 class="hero__title">O melhor churrasco da cidade!</h2>
+      <p class="hero__subtitle">Carne na brasa, sabor irresistível é atendimento nota 10.</p>
+      <a href="#reservar" class="btn btn--primary">Reserve sua mesa</a>
+    </div>
+  </section>
+
+  <main>
+    <!-- SOBRE NÓS -->
+    <section id="sobre" class="section container">
+      <h2 class="section__title">Sobre Nós</h2>
+      <p class="section__text">
+        Fundada em 1998, a Churrascaria Fogo &amp; Brasa é referência em carnes nobres e cortes especiais,
+        servidos com aquele tempero caseiro que só a gente tem.
+      </p>
+      <img src="img/equipe.png" alt="Foto da churrascaria" class="section__image" />
+    </section>
+
+    <!-- CARDÁPIO -->
+    <section id="menu" class="section container">
+      <h2 class="section__title">Nosso Cardápio</h2>
+      <ul class="menu__list">
+        <li class="menu__item"><i class="fas fa-drumstick-bite"></i> Picanha na Brasa - R$ 65,00</li>
+        <li class="menu__item"><i class="fas fa-drumstick-bite"></i> Costela Suína - R$ 50,00</li>
+        <li class="menu__item"><i class="fas fa-drumstick-bite"></i> Fraldinha - R$ 55,00</li>
+        <li class="menu__item"><i class="fas fa-drumstick-bite"></i> Linguiça Artesanal - R$ 25,00</li>
+        <li class="menu__item"><i class="fas fa-wine-glass-alt"></i> Caipirinha - R$ 18,00</li>
+      </ul>
+    </section>
+
+    <!-- GALERIA -->
+    <section id="galeria" class="section container">
+      <h2 class="section__title">Galeria de Carnes</h2>
+      <div class="gallery">
+        <img src="img/pic4n.jpg" alt="Picanha suculenta" class="gallery__image" />
+        <img src="img/costela.jpg" alt="Costela assada" class="gallery__image" />
+        <img src="img/demo03.jpg" alt="Churrasco na brasa" class="gallery__image" />
+        <img src="img/carnee.jpg" alt="Carne ao ponto" class="gallery__image" />
+      </div>
+    </section>
+
+    <!-- RESERVA -->
+    <section id="reservar" class="section container">
+      <h2 class="section__title">Faça sua Reserva</h2>
+      <form action="#" method="post" class="form-reserva" aria-label="Formulário de reserva">
+        <input type="text" name="nome" placeholder="Seu nome" required aria-required="true" />
+        <input type="tel" name="telefone" placeholder="Telefone" required aria-required="true" />
+        <input type="date" name="data" required aria-required="true" />
+        <button type="submit" class="btn btn--primary">Enviar</button>
+      </form>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="section container">
+      <h2 class="section__title">Contato</h2>
+      <p><i class="fas fa-phone"></i> (11) 99999-9999</p>
+      <p><i class="fas fa-envelope"></i> contato@churrascariafogo.com.br</p>
+      <p><i class="fab fa-instagram"></i> @churrascariafogo</p>
+    </section>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="footer">
+    <p>© 2025 Churrascaria Fogo &amp; Brasa - Todos os direitos reservados</p>
+  </footer>
+
+</body>
+
+</html>
